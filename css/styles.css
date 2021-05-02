@@ -1,0 +1,323 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Srudent: Lakhwinder Singh
+Date:4/12/2021
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Kiwi Maru', serif;
+}
+
+/* Style rules for body and images */
+body {
+	background-color:black;
+}
+
+img {
+    max-width: 100%;/* makes it scale for viewport*/
+    display: block;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rule for header */
+/*Create a Sticky Header*/
+header {
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+    background-color:orange;
+    height:190px;
+}
+/* Style rule for image*/
+header img {
+    margin:0 auto; 
+ }
+
+/* Style rules for navigation area */
+/*Edit the nav Style Rule for Mobile Viewports*/
+nav {
+    /*background-color: black;*/
+    padding:1%;
+    margin-bottom: 1%;
+}
+/*Edit the nav ul Style Rule for Mobile Viewports*/
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+/*Edit the nav li Style Rule for Mobile Viewports*/
+/*Remove the Top Border for the nav li Style Rule*/
+nav li {
+    
+    font-size: 1.5em;
+    font-family: 'Francois', sans-serif;
+    border-top: 1px solid #fff;
+    
+}
+
+nav li:first-child {
+    border-top: none; /* border out there*/
+}
+/*Edit the nav li a Style Rule (remove top border)*/
+nav li a {
+    display: block;
+    color:#fff;
+    padding: 0.5em 1em;
+    text-decoration:none;
+}
+
+/* Style rules for main content */
+/*Modify the Style Rule for the main Element*/
+main {
+    background-color: #fff;
+    padding: 2%;
+    font-size: 1.15em;
+    font-family: 'Roboto Slab', serif;
+    }
+
+/*style rule for mobile class*/
+/*Create a Style Rule for the mobile Class*/
+.mobile{
+    display: block;
+}
+.tablet-desktop{
+    display:none;
+}
+/*Modify the Home Page*/
+/* Style rules for Homepage main content */
+/*Add Style Rules for the tel-link Class*/
+.tel-link {
+    
+    background-color:orange;
+    padding:2%;
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+     
+}
+
+.tel-link a {
+    
+    text-decoration: none;
+    color:black;
+    font-size:1.5em;
+    display: block;
+    
+   
+}
+/* style rule for Hour class*/
+/*Add a Style Rule for the hours Class*/
+.hours {
+    margin-left:10%;
+}
+
+/* Style rules for About Us main content */
+#weights, #cardio, #training {
+    margin: 0 2%;
+}
+/*Style rule for round class*/
+/*Add a Style Rule for the round Class*/
+.round {
+    border-radius: 8px;
+    
+}
+.external-link{
+    color: #daba07;
+    font-weight:bold;
+    text-decoration: none;
+    
+    
+}
+
+/*Style rules for About Us main content */
+/*Modify the About Us Page*/
+/*Modify #contact a and .map Style Rules*/
+#contact {
+    text-align: center;
+}
+/*Modify the Contact Us Page*/
+#contact .contact-email-link {
+    
+    color:#666600;
+    text-decoration: none;
+    
+   
+    
+}
+
+.map {
+    border:10px solid orange;
+	width:95%;
+	height:50%;
+}
+
+/* Style rules for footer content */
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: #fff;
+    padding: 0 1em;
+    
+}
+
+footer p a {
+    color: #fff ;
+    text-decoration:none;
+}
+
+/* #exercises {
+    clear: left;
+    border-top: 1px solid #000; 
+    border-bottom: 1px solid #000;
+    background-color: #f2f2f2;
+    padding: 1% 2%;
+}
+
+#exercises dt {
+    font-weight: bold;
+}
+
+#exercises dd {
+    padding: 0.5% 1% 2% 0;
+} */
+
+/****************** Media Query for Tablet Viewport ***************/
+@media screen and (min-width:620px), print{
+    .tablet-desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+    /* Tablet Viewport: Style rule for header,  */
+    header {
+        position:initial;
+        padding-left:2%;
+    }
+     /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid orange;
+     }
+    nav li:last-child {	
+        border-right:none;
+    }
+    
+    nav li a {
+        padding:0.1em 0.75em;
+     }
+    
+    /* Tablet Viewport: Style rules for main content area */
+
+    main ul {
+        margin: 0px 0px 4% 10%;
+    }
+    
+/*content hidden in mobile view, may copy info from lines 151-165*/
+    
+    #exercises {
+    clear: left;
+    border-top: 1px solid orange; 
+    border-bottom: 1px solid orange;
+    background-color:orange;
+    padding: 1% 2%;
+        
+    }
+
+    #exercises dt {	
+        font-weight: bold;
+    }
+
+    #exercises dd {	
+        padding: 0.5% 1% 2% 0;
+    } 
+    
+    .tel-num {
+        
+        font-size:1.25em;
+    }
+
+
+    
+    .map {
+        width:600px;
+        height:450px;
+        
+    }
+
+}
+/******* Media Query for Desktop Viewport-min-width:1800px  *********/
+@media screen and (min-width:1606px), print{
+        
+header {
+        width:25%;
+        float:left;
+        padding-bottom:0; 
+    }
+    
+    /* Desktop Viewport: Style rules for nav area */
+		
+nav {	
+    float:right;
+    width:70%;
+    margin:4em 1em 0 0;
+        }
+
+nav ul {
+    text-align: right;
+    }
+    
+nav li {
+    border:none;
+    }
+
+nav li a {
+    padding: 0.5em 1em;
+    }
+    
+nav li a:hover {
+    color:orange;
+    background-color:#ffffff;
+    }
+    
+    /* Desktop Viewport: Style Rules for main content */
+main {	
+    clear:left;
+    }
+    
+main h1 { 
+    font-size:1.8em;
+    }
+    
+#weights, #cardio, #training {
+    width:29%;
+    float: left;
+    margin:0 2%;
+    }
+
+#exercises { 
+        clear: left;
+    }
+   
+}
+
+/* Media Query for Large Desktop Viewports-min-width:1900px */
+@media screen and (min-width:1800px), print{
+    #container {
+        width:1800px;
+        margin:0 auto;
+        
+    }
+}
+
+
+
